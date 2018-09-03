@@ -47,4 +47,15 @@ public class Weapon extends InventoryObject {
     public boolean isNeedsDexNotStr() {
         return needsDexNotStr;
     }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder(super.toString());
+        sb.append("On a hit, this ").append(this.getName()).append(" deals ");
+        sb.append(this.numDice).append('d').append(this.dieType);
+        if (!this.checkEndurance()) {
+            sb.append(" This weapon has taken too many hits, it is useless.");
+        }
+        //sb.append('\n');
+        return sb.toString();
+    }
 }

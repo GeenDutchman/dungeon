@@ -1,0 +1,42 @@
+{
+  "Monsters": [
+    {
+      "name": "Slime",
+      "description": "An oozing creature that eats many an unwary traveler after stunning them with pseudopodic fists.",
+      "currentHealth": 4,
+      "maxHealth": 4,
+      "level": 1,
+      "strength": 0,
+      "dexterity": 0,
+      "baseAC": 1
+    },
+    {
+      "name": "Goblin",
+      "description": "A classic monster with beady eyes, a huge nose, and large ears.",
+      "currentHealth": 10,
+      "maxHealth": 10,
+      "level": 1,
+      "strength": 1,
+      "dexterity": 1
+    },
+    {
+      "name": "Orc",
+      "description": "A classic piglike moster with pointed ears and a snout.",
+      "currentHealth": 30,
+      "maxHealth": 30,
+      "level": 3,
+      "strength": 3,
+      "dexterity": 3
+    },
+    {
+      "name": "Merchant",
+      "description": "A jolly fellow who is willing to part with goods for a little coin",
+      "currentHealth": 1000,
+      "maxHealth": 1000,
+      "level": 0,
+      "strength": 9000,
+      "dexterity": 9000,
+      "hostilie": false
+    }
+  ]
+}

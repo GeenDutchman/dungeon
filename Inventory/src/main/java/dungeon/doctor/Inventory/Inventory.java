@@ -74,7 +74,7 @@ public class Inventory {
         this.armor = StaticInventoryGenerator.getBodyInstance();
     }
 
-    public final InventoryObject getArmor() {
+    public final Armor getArmor() {
         return this.armor;
     }
 
@@ -123,6 +123,21 @@ public class Inventory {
         InventoryObject toReturn = this.backpack.get(inventoryIndex);
         this.backpack.remove(inventoryIndex);
         return toReturn;
+    }
+
+    public String list() {
+        final StringBuilder sb = new StringBuilder();
+        int i = 0;
+        sb.append("Inventory:\n");
+        for (InventoryObject so : this.backpack) {
+            sb.append(i).append(" : ").append(so.getName());
+            if (/*so == headgear ||*/ so == armor || so == mainHand || so == offHand) {
+                sb.append(" [equipped]");
+            }
+            sb.append('\n');
+        }
+        sb.append(this.myMoney.toString());
+        return sb.toString();
     }
 
     @Override
