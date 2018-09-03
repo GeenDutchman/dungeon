@@ -31,7 +31,7 @@ public class Creature {
 
     private boolean hostile = true;
 
-    public Creature(String name, String description, int maxHealth, int level, int strength, int dexterity, int baseAC) {
+    public Creature(String name, String description, int maxHealth, int level, int strength, int dexterity) {
         this.inventory = new Inventory();
         this.name = name;
         this.description = description;
@@ -40,7 +40,7 @@ public class Creature {
         this.level = level;
         this.strength = strength;
         this.dexterity = dexterity;
-        this.baseAC = baseAC;
+        //this.baseAC = baseAC;
     }
 
     public Creature(String name, String description, int currentHealth, int maxHealth, int level, int strength, int dexterity, int baseAC) {
