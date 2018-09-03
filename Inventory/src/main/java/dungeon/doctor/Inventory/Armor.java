@@ -13,7 +13,7 @@ public class Armor extends InventoryObject {
     }
 
     public void takeHit() {
-        this.decrementEndurance();
+        this.decrementEndurance(); //this already checks if it is immortal
         if (!checkEndurance()) {
             this.armorClassBonus = 0;
         }

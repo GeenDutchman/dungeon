@@ -70,6 +70,13 @@ public class Creature {
      * @return true if still alive, false if not.
      */
     public boolean damage(int amount) {
+        //wear and tear
+        if (this.getInventory().getOffHand() instanceof Shield && this.getInventory().getOffHand().checkEndurance()) {
+            ((Shield) this.getInventory().getOffHand()).takeHit();
+        } else {
+            this.getInventory().getArmor().takeHit();
+        }
+
         this.currentHealth = this.currentHealth - amount;
         if (this.currentHealth < 0) {
             return false;

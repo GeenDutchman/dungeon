@@ -108,6 +108,13 @@ public class Inventory {
         return this.offHand;
     }
 
+    public void add(InventoryObject io) throws InventoryException {
+        if (this.backpack.size() >= this.MAX_BACKPACK) {
+            throw new InventoryException("Not enough room!");
+        }
+        this.backpack.add(io);
+    }
+
     private InventoryObject get(int inventoryIndex) throws InventoryException {
         if (inventoryIndex < 0 || inventoryIndex > backpack.size()) {
             throw new InventoryException("Invalid Inventory Index!");
