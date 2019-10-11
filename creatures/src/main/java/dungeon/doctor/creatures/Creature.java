@@ -88,7 +88,7 @@ public class Creature {
         Dice dice = Dice.getInstance();
         int bonus = 0;
 
-        Weapon weapon = this.getInventory().getMainHand();
+        Weapon weapon = null;
         if (mainHand) {
             weapon = this.getInventory().getMainHand();
         } else {

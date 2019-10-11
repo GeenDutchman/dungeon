@@ -7,7 +7,7 @@ public class Player extends Creature {
     private int currentXP;
     private int levelThreshold;
 
-    public class PlayerException extends Exception {
+    public class PlayerException extends CreatureException {
         public PlayerException() {
         }
 
